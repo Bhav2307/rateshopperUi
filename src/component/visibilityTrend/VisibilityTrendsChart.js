@@ -2,7 +2,7 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 
-const DoubleLineChart = () => {
+const VisibilityTrendsChart = () => {
   const lineChartData = {
     labels: [
       "10 Sep 23",
@@ -115,4 +115,4 @@ const DoubleLineChart = () => {
   );
 };
 
-export default DoubleLineChart;
+export default VisibilityTrendsChart;

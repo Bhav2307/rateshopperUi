@@ -6,15 +6,7 @@ import TripleLineChart from '../line/TripleLineChart'
 import StackChart from '../stack/StackChart'
 
 
-const Am = ({children}) => {
 
-    return (<>
-    <h3> yuuytuybnjlmkh</h3>
-    
-    {children}
-    </>
-    )
-}
 
 function MainComp() {
   return (
@@ -26,9 +18,7 @@ function MainComp() {
     <TripleLineChart/>
     <StackChart/>
    </div>
-<Am >
-    <StackChart />
-</Am>
+
    </>
   )
 }

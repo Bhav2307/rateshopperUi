@@ -10,6 +10,8 @@ import Ranking from './component/ranking/Ranking';
 import TripleLineChart from './component/line/TripleLineChart';
 import StackChart from './component/stack/StackChart'
 import MainComp from './component/main/MainComp';
+import Fluctuation from './component/fluctuation/Fluctuation';
+import VisibilityTrends from './component/visibilityTrend/VisibilityTrends';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/TripleLineChart" element={<TripleLineChart />} />
         <Route path="/StackChart" element={<StackChart />} />
         <Route path="/MainComp" element={<MainComp />} />
+        <Route path="/Fluctuation" element={<Fluctuation />} />
+        <Route path="/VisibilityTrends" element={<VisibilityTrends />} />
       </Routes>
     </BrowserRouter>
   );

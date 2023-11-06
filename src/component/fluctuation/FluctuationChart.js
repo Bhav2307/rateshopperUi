@@ -2,43 +2,31 @@ import React from 'react';
 import { Bar } from 'react-chartjs-2';
 import 'chart.js/auto';
 
-const StackedBarChart = () => {
+const FluctuationChart = () => {
   const barChartData = {
     labels: [
-      'Day 1',
-      'Day 2',
-      'Day 3',
-      'Day 4',
-      'Day 5',
-      'Day 6',
-      'Day 7',
+      'Date',
+      'Date',
+      'Date',
+      'Date',
+      'Date',
+      'Date',
+      'Date',
+    
+      
     ],
     datasets: [
       {
         label: 'Bar 1',
         data: [-50, 10, 20, 30, 40, 50, 20], // Start at -50%
-        backgroundColor: '#ED9543',
+        backgroundColor: '#43ED9B',
       },
       {
         label: 'Bar 2',
         data: [-15, 20, -10, 40, -30, 60, -30], // Start at -50%
-        backgroundColor: '#43ED9B',
+        backgroundColor: '#ED9543',
       },
-      {
-        label: 'Bar 3',
-        data: [50, 30, -5, 20, -10, 40, -10], // Start at -50%
-        backgroundColor: '#F52E5E',
-      },
-      {
-        label: 'Bar 4',
-        data: [-30, 40, -15, 10, -20, 30, -15], // Start at -50%
-        backgroundColor: '#5956FF',
-      },
-      {
-        label: 'Bar 5',
-        data: [-10, 50, -25, 0, -30, 20, -5], // Start at -50%
-        backgroundColor: '#56B8FF',
-      },
+  
     ],
   };
 
@@ -99,4 +87,4 @@ const StackedBarChart = () => {
   return <Bar data={barChartData} options={options} />;
 };
 
-export default StackedBarChart;
+export default FluctuationChart;
