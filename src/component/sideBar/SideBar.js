@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
-import { icons } from './Icons';
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined
-} from '@ant-design/icons';
-import logo from '../../component/utils/Logo.png';
-import smallbglogo from '../../component/utils/smallbglogo.png';
-import { Layout, Menu, Button, theme } from 'antd';
-import MainComp from '../main/MainComp';
-const { Header, Sider, Content } = Layout;
-const SideBar = () => {
-  const [collapsed, setCollapsed] = useState(false);
-  const [selectedKey, setSelectedKey] = useState('1');
+import React, { useState } from "react";
+import { icons } from "./Icons";
+import logo from "../../component/utils/Logo.png";
+import smallbglogo from "../../component/utils/smallbglogo.png";
+import { Layout, Menu, theme } from "antd";
+import { Link } from "react-router-dom";
+import SubMenu from "antd/es/menu/SubMenu";
+
+const { Sider } = Layout;
+const SideBar = ({ collapsed }) => {
+  const [selectedKey, setSelectedKey] = useState("1");
   const handleMenuSelect = ({ key }) => {
     setSelectedKey(key);
   };
@@ -19,19 +16,18 @@ const SideBar = () => {
     token: { colorBgContainer },
   } = theme.useToken();
   return (
-    <Layout style={{ height: '100vh', width: '100vw' }} >
-      <Sider trigger={null} collapsible collapsed={collapsed} theme='light'>
-        <div className="demo-logo-vertical" />
-        {collapsed ?
-          <div className='flex justify-center items-center' >
-            <img src={smallbglogo} alt='logo' className='h-10 w-10 mt-5 mb-2' />
-          </div>
-          :
-          <div className='flex justify-end ml-8 mt-3 mb-2' >
-            <img src={logo} alt='logo' className='min-w-[140%]' />
-          </div>
-        }
-        <Menu
+    <Sider trigger={null} collapsible collapsed={collapsed} theme="light">
+      <div className="demo-logo-vertical" />
+      {collapsed ? (
+        <div className="flex justify-center items-center">
+          <img src={smallbglogo} alt="logo" className="h-10 w-10 mt-5 mb-2" />
+        </div>
+      ) : (
+        <div className="flex justify-end ml-8 mt-3 mb-2">
+          <img src={logo} alt="logo" className="min-w-[140%]" />
+        </div>
+      )}
+      <Menu
           mode="inline"
           selectedKeys={[selectedKey]} // Pass the selected key as an array
           onSelect={handleMenuSelect} // Add a handler for menu item selection
@@ -92,37 +88,7 @@ const SideBar = () => {
             },
           ]}
         />
-      </Sider>
-      <Layout>
-        <Header
-          style={{
-            padding: 0,
-            background: colorBgContainer, // You can change the background color here
-          }}
-        >
-          <Button
-            type="text"
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-            onClick={() => setCollapsed(!collapsed)}
-            style={{
-              fontSize: '16px',
-              width: 64,
-              height: 64,
-            }}
-          />
-        </Header>
-        <Content
-          style={{
-            margin: '24px 16px',
-            padding: 24,
-            minHeight: 280,
-            background: colorBgContainer, // You can change the background color here
-          }}
-        >
-          <MainComp />
-        </Content>
-      </Layout>
-    </Layout>
+    </Sider>
   );
 };
 

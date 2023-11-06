@@ -1,15 +1,15 @@
 import React from 'react'
 import Chart from './Chart'
 
-function TripleLineChart() {
+function TripleLineChart({title}) {
   return (
-    <div className="w-full h-full rounded-2xl bg-white  border ">
-    <div className="p-6 flex flex-col ">
+    <div className="w-full rounded-2xl bg-white border">
+    <div className="p-6 flex flex-col gap-6 ">
       <div className="w-full h-auto flex justify-between items-center">
         <div className='flex gap-3 items-center'>
 
         <div className="text-black text-xl font-medium leading-5 break-words h-auto w-auto">
-        Price Trend By Room Type
+        {title}
         </div>
               
         
@@ -28,15 +28,6 @@ function TripleLineChart() {
         </div>
       </div>
 
-      <div  className="py-3 flex items-center ">
-           
-
-         
-            
-      </div> 
-
-      
-      
       <div className="flex  items-center justify-center">  
           <Chart/>
       </div>

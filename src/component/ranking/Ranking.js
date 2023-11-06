@@ -26,10 +26,10 @@ const Box = () => {
   };
 
 
-function Ranking() {
+function Ranking({title}) {
   return (
    <div className='flex flex-col gap-6'>
-       <div className='text-2xl font-medium break-words'>Ranking</div>
+       <div className='text-2xl font-medium break-words'>{title}</div>
       <div className='flex justify-between items-center gap-3'>
           <Box/>
           <Box/>

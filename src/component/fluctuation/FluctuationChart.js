@@ -1,90 +1,40 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
-import 'chart.js/auto';
+import { Chart } from 'react-google-charts';
+const aspectRatio = 1 / 4;
 
 const FluctuationChart = () => {
-  const barChartData = {
-    labels: [
-      'Date',
-      'Date',
-      'Date',
-      'Date',
-      'Date',
-      'Date',
-      'Date',
-    
-      
-    ],
-    datasets: [
-      {
-        label: 'Bar 1',
-        data: [-50, 10, 20, 30, 40, 50, 20], // Start at -50%
-        backgroundColor: '#43ED9B',
-      },
-      {
-        label: 'Bar 2',
-        data: [-15, 20, -10, 40, -30, 60, -30], // Start at -50%
-        backgroundColor: '#ED9543',
-      },
-  
-    ],
-  };
+  const data = [
+    ['Day', 'Low', 'Opening value', 'Closing value', 'High'],
+    ['Mon', 28, 28, 45, 45],
+    ['Tue', 38, 38, 55, 55],
+    ['Wed', 55, 55, 77, 77],
+    ['Thu', 77, 77, 66, 66],
+    ['Fri', 68, 68, 15, 15],
+    ['Sat', 90, 90, 70, 70],
+    ['Sun', 60, 60, 30, 30]
+  ];
 
-  const options = {
-    aspectRatio: 4/1,
-
-    responsive: true,
-    scales: {
-      x: {
-        title: {
-          display: false,
+  return (
+    <Chart
+      chartType="CandlestickChart"
+      width="100%"
+      height="400px"
+      data={data}
+      options={{
+        legend: 'none',
+        bar: { groupWidth: '100%' }, // Remove space between bars.
+        candlestick: {
+          fallingColor: { strokeWidth: 0, fill: '#a52714' }, // red
+          risingColor: { strokeWidth: 0, fill: '#0f9d58' }   // green
         },
-        grid: {
-          display: false,
-        },
-        border: {
-          display: false,
-        },
-      },
-      y: {
-        beginAtZero: false,
-        title: {
-          display: false,
-        },
-        grid: {
-          display: false,
-        },
-        border: {
-          display: false,
-        },
-        ticks: {
-          padding: 10,
-          maxRotation: 0,
-          minRotation: 0,
-          stepSize: 10,
-          callback: function (value) {
-            // Convert numeric value to a percentage string
-            return value + '%';
+        vAxis: {
+          gridlines: {
+            color: 'lightgray', // Set the color of the gridlines
           },
         },
-      },
-    },
-    plugins: {
-      legend: {
-        display: false,
-      },
-      tooltip: {
-        enabled: true,
-      },
-    },
-    elements: {
-      bar: {
-        borderRadius: 10, // Adjust the radius as needed
-      },
-    },
-  };
-
-  return <Bar data={barChartData} options={options} />;
+      }}
+    />
+  );
 };
 
 export default FluctuationChart;

@@ -1,14 +1,14 @@
 import React from 'react'
 import FluctuationChart from './FluctuationChart'
-function Fluctuation() {
+function Fluctuation({title}) {
   return (
-    <div className="w-full h-full rounded-2xl bg-white  border ">
+    <div className=" rounded-2xl bg-white  border ">
     <div className="p-6 flex flex-col ">
       <div className="w-full h-auto flex justify-between items-center">
         <div className='flex gap-3 items-center'>
 
         <div className="text-black text-xl font-medium leading-5 break-words h-auto w-auto">
-        Fluctuation Viewer
+        {title}
         </div>
               
         
@@ -38,6 +38,7 @@ function Fluctuation() {
       
       <div className="flex  items-center justify-center w-full">  
           <FluctuationChart/>
+
       </div>
      
       <div className='flex ml-3 justify-center items-center gap-6 mt-3'>
