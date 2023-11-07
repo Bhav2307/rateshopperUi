@@ -102,7 +102,7 @@ function Notification() {
               <div className="p-[6px] flex gap-3 w-full">
                   <img  src={NotificationLogo}/>
                   <div className="flex flex-col justify-center  gap-1 w-full ">
-                      <div className="flex gap-3">
+                      <div className="flex gap-3  justify-between">
                            <div className="text-[#141719] text-base font-medium break-words ">Visibility Needs attention</div>
                            <div className="text-[#141719] text-sm font-normal break-words">3 Hrs Ago</div>
                       </div>
