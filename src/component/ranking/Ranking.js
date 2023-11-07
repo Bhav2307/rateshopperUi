@@ -3,7 +3,9 @@ import logo from './OtaLogo.svg'
 const Box = () => {
     return (
     <>
-    <div className='rounded-xl border border-solid w-52'>
+    <div className='rounded-xl border border-solid w-52 bg-white mb-6' style={{
+        boxShadow: '0px 10px 30px rgba(17, 38, 146, 0.05)',
+      }}>
      <div className='flex gap-3 justify-start p-5 '>
          <img src={logo}/>
           <div className='flex  flex-col justify-between gap-3 '>
@@ -28,7 +30,7 @@ const Box = () => {
 
 function Ranking({title}) {
   return (
-   <div className='flex flex-col gap-6'>
+   <div className='flex flex-col gap-6 bg-[#fcfcf7] mt-6'>
        <div className='text-2xl font-medium break-words'>{title}</div>
       <div className='flex justify-between items-center gap-3'>
           <Box/>

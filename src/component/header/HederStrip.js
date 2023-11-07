@@ -135,7 +135,9 @@ const ReputationComp = () => {
 function HederStrip() {
   return (
     <>
-      <div className="flex justify-between gap-6 px-12 py-6">
+      <div className="flex justify-between gap-6 px-12 py-6 rounded-xl border border-solid " style={{
+  boxShadow: '0px 10px 30px rgba(17, 38, 146, 0.05)',
+}}>
         <ParityComp />
 
         <VisibilityComp />

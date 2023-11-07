@@ -4,13 +4,13 @@ import Profile from "./userProfile.svg";
 function Header() {
   return (
     <>
-      <div className="flex justify-between  w-full">
+      <div className="flex justify-between  w-full bg-[#f7f7fc] ">
         <div className="flex  justify-between">
-          <div className="text-black text-2xl font-medium flex items-center justify-center">
+          <div className="text-black text-2xl font-medium flex items-center justify-center pl-6">
           Hello Hotelier 👋🏼
           </div>
         </div>
-        <div className="flex  gap-6 justify-center items-center">
+        <div className="flex  gap-6 justify-center items-center pr-6">
           <div>
             <svg
               width="26"

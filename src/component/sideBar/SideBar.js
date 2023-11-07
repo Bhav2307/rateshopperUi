@@ -4,7 +4,6 @@ import logo from "../../component/utils/Logo.png";
 import smallbglogo from "../../component/utils/smallbglogo.png";
 import { Layout, Menu, theme } from "antd";
 import { Link } from "react-router-dom";
-import SubMenu from "antd/es/menu/SubMenu";
 
 const { Sider } = Layout;
 const SideBar = ({ collapsed }) => {
@@ -16,6 +15,7 @@ const SideBar = ({ collapsed }) => {
     token: { colorBgContainer },
   } = theme.useToken();
   return (
+    
     <Sider trigger={null} collapsible collapsed={collapsed} theme="light">
       <div className="demo-logo-vertical" />
       {collapsed ? (
@@ -35,7 +35,7 @@ const SideBar = ({ collapsed }) => {
             {
               key: '1',
               icon: icons.dashbord,
-              label: 'DashBoard',
+              label: <Link to={"/"}>DashBoard</Link>,
               style: {
                 backgroundColor: selectedKey === '1' && '#5932EA',
                 color: selectedKey === '1' && '#fff',
@@ -44,7 +44,7 @@ const SideBar = ({ collapsed }) => {
             {
               key: '2',
               icon: icons.reputation,
-              label: 'Parity Check',
+              label: <Link to={"/ParityCheck"}>Parity Check</Link>,
               style: {
                 backgroundColor: selectedKey === '2' && '#5932EA',
                 color: selectedKey === '2' && '#fff',
@@ -53,7 +53,7 @@ const SideBar = ({ collapsed }) => {
             {
               key: '3',
               icon: icons.reputation,
-              label: 'Reputation',
+              label: <Link to={"/"}>Reputation</Link>,
               style: {
                 backgroundColor: selectedKey === '3' && '#5932EA',
                 color: selectedKey === '3' && '#fff',
@@ -62,7 +62,7 @@ const SideBar = ({ collapsed }) => {
             {
               key: '4',
               icon: icons.visibilty,
-              label: 'Visibility',
+              label: <Link to={"/visiblity"}>Visibility</Link>,
               style: {
                 backgroundColor: selectedKey === '4' && '#5932EA',
                 color: selectedKey === '4' && '#fff',
@@ -71,7 +71,7 @@ const SideBar = ({ collapsed }) => {
             {
               key: '5',
               icon: icons.fluctuation,
-              label: 'fluctuation',
+              label: <Link to={"/fluctuations"}>Fluctuation</Link>,
               style: {
                 backgroundColor: selectedKey === '5' && '#5932EA',
                 color: selectedKey === '5' && '#fff',
@@ -80,10 +80,19 @@ const SideBar = ({ collapsed }) => {
             {
               key: '6',
               icon: icons.calender,
-              label: 'Calender',
+              label: <Link to={"/"}>Calendar</Link>,
               style: {
                 backgroundColor: selectedKey === '6' && '#5932EA',
                 color: selectedKey === '6' && '#fff',
+              }
+            },
+            {
+              key: '7',
+              icon: icons.calender,
+              label: <Link to={"/notification"}>Notification </Link>,
+              style: {
+                backgroundColor: selectedKey === '6' && '#5932EA',
+                color: selectedKey === '7' && '#fff',
               }
             },
           ]}

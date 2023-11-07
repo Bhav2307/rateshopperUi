@@ -2,7 +2,9 @@ import React from 'react'
 import FluctuationChart from './FluctuationChart'
 function Fluctuation({title}) {
   return (
-    <div className=" rounded-2xl bg-white  border ">
+    <div className=" rounded-xl bg-white  border  "style={{
+      boxShadow: '0px 10px 30px rgba(17, 38, 146, 0.05)',
+    }}>
     <div className="p-6 flex flex-col ">
       <div className="w-full h-auto flex justify-between items-center">
         <div className='flex gap-3 items-center'>
@@ -27,12 +29,7 @@ function Fluctuation({title}) {
         </div>
       </div>
 
-      <div  className="py-3 flex items-center ">
-           
-        
-         
-            
-      </div> 
+   
 
       
       
@@ -41,14 +38,14 @@ function Fluctuation({title}) {
 
       </div>
      
-      <div className='flex ml-3 justify-center items-center gap-6 mt-3'>
+      <div className='flex ml-3 justify-center items-center gap-11 mt-6'>
                 <div className='flex justify-center items-center gap-3'>
-                    <div className='w-2 h-2 bg-[#43ED9B] py-[2px] rounded-full '/>
-                    <div className='text-[#424E61] text-xs font-normal leading-3 break-words py-1'>Rise </div>
+                    <div className='w-5 h-5 bg-[#43ED9B]  rounded-full '/>
+                    <div className='text-[#424E61] text-base font-normal leading-3 break-words' >Rise </div>
                 </div>
                 <div className='flex justify-center items-center gap-3'>
-                    <div className='w-2 h-2 bg-[#ED9543] py-[2px] rounded-full'/>
-                    <div className='text-[#424E61] text-xs font-normal leading-3 break-words py-1'>Fail</div>
+                    <div className='w-5 h-5 bg-[#ED9543]  rounded-full'/>
+                    <div className='text-[#424E61] text-base font-normal leading-3 break-words '>Fail</div>
                 </div>
               
             </div>

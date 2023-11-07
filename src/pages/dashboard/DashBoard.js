@@ -10,7 +10,7 @@ const DashBoard = () => {
       <HederStrip />
       <Ranking title={"Ranking"} /> 
       <TripleLineChart title={"Price Trend By Room Type"}/>
-      <StackChart />
+      <StackChart title={"Price Trend"} />
     </>
   );
 };
