@@ -57,7 +57,6 @@ const App = () => {
                 background: colorBgContainer, // You can change the background color here
               }}
             >
-              {/* <AppRouter /> */}
               <Routes>
                 <Route path="/" element={<DashBoard />} />
                 <Route path="/ParityCheck" element={<ParityCheck />} />
